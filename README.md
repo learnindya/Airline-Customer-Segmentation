@@ -8,31 +8,45 @@ Dataset contains historical customer data of an airline company. The company wan
 - Standardization
 
 ## K-means Clustering
-- Optimal number of cluster based on silhouette plot: 3
-- Silhouette score: 0.27
+- Optimal number of cluster based on silhouette plot: 2
+- Silhouette score: 0.35
 
 ## Agglomerative Clustering
 - Optimal number of cluster based on dendrogram: 2
-- Optimal number of cluster based on silhouette plot: 3
-- Silhouette score: 0.27
+- Silhouette score: 0.37
 
 ## Result
 **Cluster 0:**
-
-Low recency score (high LAST_TO_END), low frequency, low monetary, average spending power, low points, average discount.
-
-Interpretation: can be considered as 'potential customer' because they have spending power but did not utilize it. They received the same amount of discount as other cluster but did not engage with airline.
-
-**Cluster 1:**
 
 High recency score (low LAST_TO_END), high frequency, high monetary, high spending power, high points, average discount.
 
 Interpretation: can be considered as 'premium customer'. They often fly and do not hesitate to spend money. Possible include business traveler and people with flexible schedule.
 
-**Cluster 2:**
+**Cluster 1:**
 
-High recency score (low LAST_TO_END), average frequency, average monetary, low spending power, average points, low discount.
+Average recency score (average LAST_TO_END), low frequency, low monetary, low spending power, low points, average discount.
 
-Interpretation: can be considered as 'general customer'. They receive small discount but still fly more frequently and longer.
+Interpretation: can be considered as 'potential customer' because they have low score across all aspects. They received the same amount of discount as other cluster but did not engage with airline.
+
+## Business Recommendation
+**Cluster 0 (Premium Customer)**
+
+Goal: Maintain loyalty and increase purchases
+
+Strategy:
+
+*   Provide special offers and rewards for loyal customer.
+*   Provide exclusive experience in their journey, such as exclusive check-in counter, access to VIP lounge, priority boarding, upgrade to a higher class, and extra baggage allowance.
+*  Use customer data to provide personalized experiences, such as flight recommendations or tour packages. Offer additional products or services that are relevant to the customer's purchasing history.
+*  Collaborate with airlines, hotels, tour & travel companies, and insurance companies to offer attractive tour packages and travel insurance.
 
 
+**Cluster 1 (Potential Customer)**
+
+Goal: Drive engagement and encourage purchase
+
+Strategy:
+
+*   Offer attractive discounts and promotions.
+*   Send personalized emails with product or service recommendations based on customer interests and purchase history.
+*   Send surveys to identify potential barriers and how to overcome them.
